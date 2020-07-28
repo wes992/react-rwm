@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="/">
         RentWithMe
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -36,9 +37,9 @@ const Header = () => {
         </form>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/">
               Home <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item dropdown">
             <a
@@ -66,14 +67,14 @@ const Header = () => {
             </div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/login">
               Login
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/register">
               Sign Up
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
