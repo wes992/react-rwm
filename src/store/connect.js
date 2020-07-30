@@ -1,11 +1,11 @@
 import React from "react";
-import { StateContext } from "../stateContext";
+import { StateContext } from "./provider";
 
 const connect = selectState => Component => {
     class Connect extends React.Component {
       
       render() {
-        const rootState = this.context;
+        const rootState = this.context.getState();
         const slice = selectState(rootState);
 
         return <Component {...slice} />;

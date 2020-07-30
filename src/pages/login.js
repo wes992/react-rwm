@@ -8,7 +8,7 @@ class Login extends Component {
   render() {
 
     const { data } = this.props;
-    return <p>{JSON.stringify(data())}</p>;
+    return <p>{JSON.stringify(data)}</p>;
   }
 }
 
