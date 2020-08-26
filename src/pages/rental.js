@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import RentalCard from "../components/rentals/RentalCard";
 import connect from '../store/connect';
+import fetchRentals from '../actions';
 // import { StateContext } from "../stateContext";
 
 
 class RentalHome extends Component {
 
-  state = {
-    rentals: []
-  }
 
   componentDidMount() {
-    const { rentals } = this.props;
-    this.setState({rentals});
+    this.props.dispatch(fetchRentals());
   }
 
   renderRentals = (rentals) => 
@@ -23,7 +20,7 @@ class RentalHome extends Component {
       );
   
   render() {
-    const { rentals } = this.state;
+    const { rentals } = this.props;
 
     return (
       <div className="card-list">
